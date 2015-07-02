@@ -15,9 +15,18 @@ describe "the process of editing a skill" do
   it "changes a skill's info" do
     test_skill = Skill.create(name: "ruby", description: "Ruby is my favorite language.")
     visit skill_path(test_skill)
-    click_on "Edit skill"
+    click_on "Edit"
     fill_in "Description", with: "I love ruby!"
     click_on "Update Skill"
     expect(page).to have_content "I love ruby!"
+  end
+end
+
+describe "the process of deleting a skill" do
+  it "removes a skill" do
+    test_skill = Skill.create(name: "ruby", description: "Ruby is my favorite language.")
+    visit skill_path(test_skill)
+    click_on "Delete"
+    expect(page).to have_no_content "ruby"
   end
 end

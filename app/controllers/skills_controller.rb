@@ -37,6 +37,11 @@ class SkillsController < ApplicationController
     end
   end
 
+  def destroy
+    Skill.find(params[:id]).destroy
+    redirect_to skills_path
+  end
+
   private
   def skill_params
     params.require(:skill).permit(:name, :description)

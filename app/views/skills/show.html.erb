@@ -3,12 +3,14 @@
     <%= render "success" %>
     <h2>
       <%= @skill.name %>
-      <%= link_to "Edit skill", edit_skill_path(@skill), class: "crud-link pull-right" %>
+      <%= link_to "Delete", skill_path(@skill), class: "crud-link text-danger pull-right",
+                                                method: "delete" %>
     </h2>
     <hr>
     <p>
       <%= @skill.description %>
     </p>
+      <%= link_to "Edit", edit_skill_path(@skill), class: "crud-link pull-right" %>
   </div>
 
   <div class="col-md-6">
