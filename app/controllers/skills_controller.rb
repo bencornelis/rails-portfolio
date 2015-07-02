@@ -18,6 +18,25 @@ class SkillsController < ApplicationController
     end
   end
 
+  def show
+    @skill = Skill.find(params[:id])
+  end
+
+  def edit
+    @skill = Skill.find(params[:id])
+  end
+
+  def update
+    @skill = Skill.find(params[:id])
+    if @skill.update(skill_params)
+      flash[:notice] = "Skill successfully updated."
+      redirect_to skill_path(@skill)
+    else
+      flash[:alert] = "Unable to update skill, try again."
+      render :edit
+    end
+  end
+
   private
   def skill_params
     params.require(:skill).permit(:name, :description)
