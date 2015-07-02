@@ -30,3 +30,16 @@ describe "the process of deleting a skill" do
     expect(page).to have_no_content "ruby"
   end
 end
+
+describe "the process of adding a project to a skill" do
+  it "adds a project" do
+    test_skill = Skill.create(name: "ruby", description: "Ruby is my favorite language.")
+    visit skill_path(test_skill)
+    click_on "Add project"
+    fill_in "Name", with: "Poker"
+    fill_in "Description", with: "Texas Hold'em game made with Ruby/Sinatra/ActiveRecord"
+    fill_in "Github url", with: "https://github.com/bencornelis/poker"
+    click_on "Create Project"
+    expect(page).to have_content "Poker"
+  end
+end

@@ -1,5 +1,5 @@
 require "rails_helper"
 
 describe Project do
-  it { should have_and_belong_to_many :skills }
+  it { should belong_to :skill }
 end
