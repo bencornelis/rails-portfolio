@@ -15,3 +15,27 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+body {
+  padding: 50px;
+}
+
+#profile-pic {
+  background-image: url(/assets/profile.jpg);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 30px;
+}
+
+textarea {
+  resize: none;
+}
+
+#add-skill {
+  font-size: 14px !important;
+}
+
+.top-margin {
+  margin-top: 100px;
+}

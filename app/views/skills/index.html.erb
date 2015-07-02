@@ -1,0 +1,22 @@
+<div class="row">
+
+  <div class="col-md-6">
+    <div id="profile-pic"></div>
+    I'm currently attending Epicodus, a web development bootcamp where I am learning test-driven development though pair-programming. Previously, a life-long love of puzzles, logic, and problem-solving drove me to pursue a phd in Mathematics. While I enjoyed the process of problem solving involved in abstract math, I was unsatisfied by the lack of real-world impact. I decided to become a web developer because it allows me to build something useful and tangible using many of the same skills.
+  </div>
+
+  <div class="col-md-6">
+    <h3 class="text-center">Coding Skills
+       <span id="add-skill" class="pull-right"><%= link_to "Add skill", new_skill_path %></span>
+    </h3>
+    <hr>
+    <% @skills.each do |skill| %>
+      <div class="text-center col-md-4"><%= skill.name %> <hr></div>
+    <% end %>
+
+    <% if flash[:notice] %>
+      <div class="top-margin alert alert-success" role="alert"><%= flash[:notice] %></div>
+    <% end %>
+  </div>
+
+</div>
