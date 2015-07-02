@@ -18,6 +18,7 @@
 
 body {
   padding: 50px;
+  background-color: #032336;
 }
 
 #profile-pic {
@@ -34,8 +35,32 @@ textarea {
 
 .crud-link {
   font-size: 14px !important;
+  margin-top:10px;
 }
 
 .top-margin {
   margin-top: 100px;
+}
+
+.main {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin-right: 50px;
+  min-height: 600px;
+}
+
+.separator {
+  min-height: 500px;
+  width: 2px;
+  float:left;
+  background-color: #6F8FA2;
+}
+
+.item {
+  margin:20px;
+}
+
+.nav-item a {
+  color: white !important;
 }

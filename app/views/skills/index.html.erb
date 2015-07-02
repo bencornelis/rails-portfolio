@@ -1,23 +1,31 @@
 <div class="row">
 
-  <div class="col-md-6">
+  <div class="main-topic col-md-6">
     <div id="profile-pic"></div>
-    I'm currently attending Epicodus, a web development bootcamp where I am learning test-driven development though pair-programming. Previously, a life-long love of puzzles, logic, and problem-solving drove me to pursue a graduate degree in Mathematics. While I enjoyed the process of problem solving involved in abstract math, I was unsatisfied by the lack of real-world impact. I decided to become a web developer because it allows me to build something useful and tangible using many of the same skills.
+    I'm Ben, a front and backend web developer in Portland.
+    <p>
+      <a href="https://github.com/bencornelis">Github</a> |
+      <a href="https://www.linkedin.com/in/bencornelis">LinkedIn</a>
+    </p>
   </div>
 
-  <div class="col-md-6">
+  <div class="separator"></div>
+
+  <div class="my-panel col-md-3 col-md-offset-2">
     <%= render "layouts/success" %>
     <h3 class="text-center">
-      Coding Skills
-      <%= link_to "Add skill", new_skill_path, class: "crud-link pull-right" %>
+      Skills
     </h3>
     <hr>
     <% @skills.each do |skill| %>
-      <div class="text-center col-md-4">
+      <div class="text-center item">
         <%= link_to skill.name, skill_path(skill) %>
-        <hr>
       </div>
     <% end %>
+    <hr>
+      <div class="text-center skill">
+        <%= link_to "Add skill", new_skill_path, class: "crud-link" %>
+      </div>
   </div>
 
 </div>

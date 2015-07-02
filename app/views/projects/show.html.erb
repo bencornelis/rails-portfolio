@@ -3,7 +3,6 @@
   <div class="col-md-6">
     <h2>
       <%= @project.name %>
-      <a href="<%= @project.github_url %>" class="crud-link"> - Github </a>
       <%= link_to "Delete", skill_project_path(@project.skill, @project),
                             class: "crud-link text-danger pull-right",
                             method: "delete" %>
@@ -15,7 +14,7 @@
       <%= link_to "Edit", edit_skill_project_path(@project.skill, @project), class: "crud-link pull-right" %>
   </div>
 
-  <div class="col-md-6">
-
+  <div class="text-center col-md-6">
+    <a href="<%= @project.github_url %>" class="crud-link"> View on Github </a>
   </div>
 </div>

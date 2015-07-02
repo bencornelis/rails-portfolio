@@ -9,7 +9,17 @@
 <body>
 
 <div class="container">
-  <%= yield %>
+  <div class="my-nav">
+    <ul class="list-unstyled list-inline">
+      <li class="nav-item">
+        <%= link_to "About", skills_path %>
+        </li>
+    </ul>
+  </div>
+  <div class="main">
+    <%= yield %>
+  </div>
+
 </div>
 
 </body>

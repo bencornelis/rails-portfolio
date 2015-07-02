@@ -1,29 +1,32 @@
 <div class="row">
   <%= render "layouts/success" %>
-  <div class="col-md-6">
+  <div class="col-md-6 my-panel">
     <h2>
       <%= @skill.name %>
-      <%= link_to "Delete", skill_path(@skill), class: "crud-link text-danger pull-right",
+      <%= link_to "Delete", skill_path(@skill), class: "crud-link text-danger",
                                                 method: "delete" %>
     </h2>
     <hr>
     <p>
       <%= @skill.description %>
     </p>
-      <%= link_to "Edit", edit_skill_path(@skill), class: "crud-link pull-right" %>
+    <hr>
+      <%= link_to "Edit", edit_skill_path(@skill), class: "crud-link" %>
   </div>
-
-  <div class="col-md-3 col-md-offset-2">
-    <h3>
+  <div class="separator"></div>
+  <div class="my-panel col-md-3 col-md-offset-2">
+    <h3 class="text-center">
       Projects
-      <%= link_to "Add project", new_skill_project_path(@skill), class: "crud-link pull-right" %>
     </h3>
     <hr>
     <% @skill.projects.each do |project| %>
-      <div class="text-center col-md-6">
+      <div class="text-center item">
         <%= link_to project.name, skill_project_path(@skill, project) %>
-        <hr>
       </div>
     <% end %>
+    <hr>
+    <div class="text-center skill">
+      <%= link_to "Add project", new_skill_project_path(@skill), class: "crud-link" %>
+    </div>
   </div>
 </div>
