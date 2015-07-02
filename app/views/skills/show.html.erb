@@ -21,7 +21,7 @@
     <hr>
     <% @skill.projects.each do |project| %>
       <div class="text-center col-md-6">
-        <%= project.name %>
+        <%= link_to project.name, skill_project_path(@skill, project) %>
         <hr>
       </div>
     <% end %>

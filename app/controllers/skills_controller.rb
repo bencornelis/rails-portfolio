@@ -38,6 +38,7 @@ class SkillsController < ApplicationController
   end
 
   def destroy
+    flash[:notice] = "Skill successfully deleted."
     Skill.find(params[:id]).destroy
     redirect_to skills_path
   end
