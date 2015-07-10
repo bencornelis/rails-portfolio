@@ -1,21 +1,19 @@
-<div class="row">
-  <%= render "layouts/success" %>
-  <div class="col-md-6">
-    <h2>
-      <%= @project.name %>
-      <%= link_to "Delete", skill_project_path(@project.skill, @project),
-                            class: "crud-link text-danger pull-right",
-                            method: "delete" %>
-    </h2>
-    <hr>
-    <p>
-      <%= @project.description %>
-    </p>
-      <%= link_to "Edit", edit_skill_project_path(@project.skill, @project), class: "crud-link pull-right" %>
-  </div>
-  <div class="col-md-1"></div>
-  <div class="separator"></div>
-  <div class="text-center col-md-4">
-    <a href="<%= @project.github_url %>" class="crud-link"> View on Github </a>
-  </div>
+<div class=" col-md-5 col-md-offset-2">
+  <h2>
+    <%= @project.name %>
+  </h2>
+  <hr>
+  <p>
+    <%= @project.description %>
+  </p>
+  <% if policy(@project).update? %>
+    <%= link_to "Edit", edit_skill_project_path(@project.skill, @project), class: "crud-link pull-right" %>
+    <%= link_to "Delete", skill_project_path(@project.skill, @project),
+                          class: "crud-link text-danger pull-right",
+                          method: "delete" %>
+  <% end %>
+</div>
+<div class="separator col-md-offset-1"></div>
+<div class="text-center col-md-2 col-md-offset-1">
+  <a href="<%= @project.github_url %>" class="crud-link"> View on Github </a>
 </div>

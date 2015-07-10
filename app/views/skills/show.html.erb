@@ -1,32 +1,33 @@
-<div class="row">
-  <%= render "layouts/success" %>
-  <div class="col-md-6 my-panel">
-    <h2>
-      <%= @skill.name %>
-      <%= link_to "Delete", skill_path(@skill), class: "crud-link text-danger",
-                                                method: "delete" %>
-    </h2>
-    <hr>
-    <p>
-      <%= @skill.description %>
-    </p>
-    <hr>
-      <%= link_to "Edit", edit_skill_path(@skill), class: "crud-link" %>
-  </div>
-  <div class="separator"></div>
-  <div class="my-panel col-md-3 col-md-offset-2">
-    <h3 class="text-center">
-      Projects
-    </h3>
-    <hr>
-    <% @skill.projects.each do |project| %>
-      <div class="text-center item">
-        <%= link_to project.name, skill_project_path(@skill, project) %>
-      </div>
-    <% end %>
-    <hr>
+<div class=" col-md-5 col-md-offset-2 my-panel">
+  <h2>
+    <%= @skill.name %>
+  </h2>
+  <hr>
+  <p>
+    <%= @skill.description %>
+  </p>
+  <hr>
+  <% if policy(@skill).update? %>
+    <%= link_to "Edit", edit_skill_path(@skill), class: "crud-link" %>
+    <%= link_to "Delete", skill_path(@skill), class: "crud-link text-danger",
+                                              method: "delete" %>
+  <% end %>
+</div>
+<div class="separator col-md-offset-1"></div>
+<div class="my-panel col-md-2 col-md-offset-1">
+  <h3 class="text-center">
+    Projects
+  </h3>
+  <hr>
+  <% @skill.projects.each do |project| %>
+    <div class="text-center item">
+      <%= link_to project.name, skill_project_path(@skill, project) %>
+    </div>
+  <% end %>
+  <hr>
+  <% if policy(Project.new).create? %>
     <div class="text-center skill">
       <%= link_to "Add project", new_skill_project_path(@skill), class: "crud-link" %>
     </div>
-  </div>
+  <% end %>
 </div>

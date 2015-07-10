@@ -8,13 +8,21 @@
 </head>
 <body>
 
-<div class="container">
-  <div class="nav-item">
-    <%= link_to "About", skills_path %>
+<div class="row">
+  <div class="nav-bar">
+    <ul class="list-unstyled list-inline pull-left">
+      <li class="nav-item"><%= link_to "Home", skills_path %></li>
+      <li class="nav-item"><%= link_to "Blog", skills_path %></li>
+    </ul>
+    <span class="pull-right notice">
+      <%= render "layouts/alert" %>
+      <%= render "layouts/success" %>
+    </span>
   </div>
-  <div class="main">
-    <%= yield %>
-  </div>
+</div>
+<div class="row main">
+  <%= yield %>
+</div>
 </div>
 
 </body>

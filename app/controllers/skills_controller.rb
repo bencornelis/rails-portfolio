@@ -9,6 +9,7 @@ class SkillsController < ApplicationController
 
   def create
     @skill = Skill.new(skill_params)
+    authorize @skill
     if @skill.save
       flash[:notice] = "Skill successfully added."
       redirect_to skills_path

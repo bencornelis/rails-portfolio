@@ -16,10 +16,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-body {
-  padding: 50px;
-  background-color: #032336;
-}
 
 #profile-pic {
   background-image: url(/assets/profile.jpg);
@@ -27,6 +23,41 @@ body {
   height: 150px;
   border-radius: 50%;
   margin: 30px;
+}
+
+.nav-bar {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.nav-item {
+  text-align: center;
+  background-color: #6F8FA2;
+  padding: 10px 15px 10px 15px;
+  margin: 5px;
+}
+
+.nav-item:hover {
+  opacity: 0.5;
+  background-color: black;
+  cursor: pointer;
+}
+
+.nav-item:active {
+  opacity: 0.5;
+  background-color: black;
+}
+
+.nav-item a {
+  color: white !important;
+}
+
+.nav-item a:hover {
+  text-decoration: none !important;
+}
+
+.notice {
+  margin:10px;
 }
 
 textarea {
@@ -42,14 +73,6 @@ textarea {
   margin-top: 100px;
 }
 
-.main {
-  background: white;
-  border-radius: 10px;
-  padding: 30px;
-  margin-right: 50px;
-  min-height: 600px;
-}
-
 .separator {
   min-height: 500px;
   width: 2px;
@@ -59,8 +82,4 @@ textarea {
 
 .item {
   margin:20px;
-}
-
-.nav-item a {
-  color: white !important;
 }
