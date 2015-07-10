@@ -27,7 +27,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       flash[:alert] = "Unable to add post, try again."
-      render :new
+      redirect_to :back
     end
   end
 

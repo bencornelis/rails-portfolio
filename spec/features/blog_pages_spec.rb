@@ -12,6 +12,16 @@ describe "adding a post" do
     expect(page).to have_content "some title"
   end
 
+  it "redirects back when a post is missing a required field" do
+    admin = FactoryGirl.create(:admin)
+    login_as(admin)
+    visit posts_path
+    click_on "New Post"
+    fill_in "Content", with: "content"
+    click_on "Create Post"
+    expect(page).to have_content "Unable to add post, try again."
+  end
+
   it "doesn't allow regular users to add posts" do
     user = FactoryGirl.create(:user)
     login_as(user)

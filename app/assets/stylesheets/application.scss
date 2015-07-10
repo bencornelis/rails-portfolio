@@ -16,6 +16,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+.main {
+  margin-top: 30px;
+}
 
 #profile-pic {
   background-image: url(/assets/profile.jpg);
