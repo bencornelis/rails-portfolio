@@ -1,0 +1,19 @@
+<div class="comment">
+  <h5>
+    <strong><%= comment.user.name %></strong>
+    <span class="weak">
+      said on <%= comment.commented_at %>
+      <span class="pull-right weak">last edited <%= convert_time(comment.time_since_updated) %> ago</span>
+    </span>
+  </h5>
+  <div>
+    <%= comment.text %>
+
+    <% if policy(comment).update? %>
+      <span class="pull-right">
+        <%= link_to "Edit", edit_post_comment_path(post, comment) %> |
+        <%= link_to "Delete", post_comment_path(post, comment), method: :delete, class: "text-danger" %>
+      </span>
+    <% end %>
+  </div>
+</div>

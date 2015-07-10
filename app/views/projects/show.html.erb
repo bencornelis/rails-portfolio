@@ -1,4 +1,4 @@
-<div class=" col-md-5 col-md-offset-2">
+<div class="col-md-5 col-md-offset-2">
   <h2>
     <%= @project.name %>
   </h2>
@@ -7,10 +7,10 @@
     <%= @project.description %>
   </p>
   <% if policy(@project).update? %>
-    <%= link_to "Edit", edit_skill_project_path(@project.skill, @project), class: "crud-link pull-right" %>
-    <%= link_to "Delete", skill_project_path(@project.skill, @project),
-                          class: "crud-link text-danger pull-right",
-                          method: "delete" %>
+      <%= link_to "Edit", edit_skill_project_path(@project.skill, @project), class: "crud-link" %>
+    | <%= link_to "Delete", skill_project_path(@project.skill, @project),
+                            class: "crud-link text-danger",
+                            method: "delete" %>
   <% end %>
 </div>
 <div class="separator col-md-offset-1"></div>

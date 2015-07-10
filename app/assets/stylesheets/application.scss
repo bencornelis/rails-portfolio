@@ -83,3 +83,16 @@ textarea {
 .item {
   margin:20px;
 }
+
+.post {
+  min-height: 400px;
+}
+
+.comment {
+  border-bottom: 2px solid #6F8FA2;
+  padding: 20px;
+}
+
+.weak {
+  opacity: 0.5;
+}

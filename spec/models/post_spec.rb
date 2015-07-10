@@ -1,5 +1,5 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe User do
+describe Post do
   it { should have_many :comments }
 end

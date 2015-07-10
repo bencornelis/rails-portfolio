@@ -1,0 +1,28 @@
+<div class="post">
+  <h2>
+    <%= post.title %>
+  </h2>
+  <h5 class="weak">
+    posted by Ben Cornelis on <%= post.posted_at %>
+  </h5>
+  <h5 class="weak">
+    last updated <%= convert_time(post.time_since_updated) %> ago
+  </h5>
+  <hr>
+  <p>
+    <%= post.content %>
+  </p>
+  <% if policy(post).update? %>
+    <%= link_to "Edit", edit_post_path(post) %> |
+    <%= link_to "Delete", post_path(post), method: :delete, class: "text-danger" %>
+  <% end %>
+</div>
+<p>
+  <%= link_to "Leave a comment", new_post_comment_path(post) %>
+</p>
+<hr>
+<div class="comments">
+  <% post.comments.each do |comment| %>
+    <%= render "comments/comment", comment: comment, post: post %>
+  <% end %>
+</div>

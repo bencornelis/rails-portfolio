@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  # devise_for :users
   root to: "skills#index"
   resources :skills do
     resources :projects
   end
-  resources :posts
+  resources :posts do
+    resources :comments
+  end
   devise_for :users, controllers: {
-    sessions: 'users/registrations'
+    registrations: 'users/registrations',
+    sessions: 'users/sessions'
   }
 end

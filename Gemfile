@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
+gem 'pry'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'

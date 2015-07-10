@@ -12,7 +12,10 @@
   <div class="nav-bar">
     <ul class="list-unstyled list-inline pull-left">
       <li class="nav-item"><%= link_to "Home", skills_path %></li>
-      <li class="nav-item"><%= link_to "Blog", skills_path %></li>
+      <li class="nav-item"><%= link_to "Blog", posts_path %></li>
+      <% if current_user && current_user.admin? %>
+        <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% end %>
     </ul>
     <span class="pull-right notice">
       <%= render "layouts/alert" %>
