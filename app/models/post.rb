@@ -11,7 +11,7 @@ class Post < ActiveRecord::Base
   end
 
   def self.most_recent(num_posts)
-    sort.limit(num_posts)[1..-1]
+    sort.limit(num_posts)
   end
 
   def posted_at

@@ -5,12 +5,13 @@
 <% @recent_posts.each do |post| %>
   <div class="item">
     <%= link_to post.title, post_path(post) %>
+    <span class="weak">(<%= post.posted_at %>)</span>
   </div>
 <% end %>
 <hr>
 <% if policy(Post.new).create? %>
   <%= link_to "New Post", new_post_path %>
-<% else %>
+<% elsif !user_signed_in? %>
   <%= link_to "Login", new_user_session_path %> or
   <%= link_to "Signup", new_user_registration_path %>
    to leave a comment

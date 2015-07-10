@@ -11,10 +11,22 @@
 <div class="row">
   <div class="nav-bar">
     <ul class="list-unstyled list-inline pull-left">
-      <li class="nav-item"><%= link_to "Home", skills_path %></li>
-      <li class="nav-item"><%= link_to "Blog", posts_path %></li>
-      <% if current_user && current_user.admin? %>
-        <li class="nav-item"><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <li class="nav-item">
+        <%= link_to skills_path do %>
+          <span>Home</span>
+        <% end %>
+      </li>
+      <li class="nav-item">
+        <%= link_to posts_path do %>
+          <span>Blog</span>
+        <% end %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <span>Logout</span>
+          <% end %>
+        </li>
       <% end %>
     </ul>
     <span class="pull-right notice">
