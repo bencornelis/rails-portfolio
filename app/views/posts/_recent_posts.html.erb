@@ -12,7 +12,9 @@
 <% if policy(Post.new).create? %>
   <%= link_to "New Post", new_post_path %>
 <% elsif !user_signed_in? %>
-  <%= link_to "Login", new_user_session_path %> or
-  <%= link_to "Signup", new_user_registration_path %>
-   to leave a comment
+  <div>
+    <%= link_to "Login", new_user_session_path %> or
+    <%= link_to "Signup", new_user_registration_path %>
+  </div>
+  to leave a comment
 <% end %>

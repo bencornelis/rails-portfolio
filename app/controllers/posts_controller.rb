@@ -31,9 +31,9 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    flash[:notice] = "Post successfully deleted."
     post = Post.find(params[:id])
     authorize post
+    flash[:notice] = "Post successfully deleted."
     post.destroy
     redirect_to posts_path
   end
