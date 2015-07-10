@@ -9,11 +9,14 @@ class CommentsController < ApplicationController
   def create
     @post = Post.find(params[:post_id])
     @comment = Comment.new(comment_params)
+    authorize @comment
     @post.comments << @comment
     current_user.comments << @comment
     if @comment.save
+      flash[:notice] = "Comment successfully added."
       redirect_to post_path(@post)
     else
+      flash[:alert] = "Unable to add comment, try again."
       redirect_to :back
     end
   end
@@ -25,13 +28,9 @@ class CommentsController < ApplicationController
 
   def update
     @comment = Comment.find(params[:id])
-    if @comment.update(comment_params)
-      flash[:notice] = "Comment successfully updated."
-      redirect_to post_path(@comment.post)
-    else
-      flash[:alert] = "Unable to update comment, try again."
-      render :edit
-    end
+    @comment.update(comment_params)
+    flash[:notice] = "Comment successfully updated."
+    redirect_to post_path(@comment.post)
   end
 
   def destroy

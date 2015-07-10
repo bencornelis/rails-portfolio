@@ -32,13 +32,9 @@ class SkillsController < ApplicationController
   def update
     @skill = Skill.find(params[:id])
     authorize @skill
-    if @skill.update(skill_params)
-      flash[:notice] = "Skill successfully updated."
-      redirect_to skill_path(@skill)
-    else
-      flash[:alert] = "Unable to update skill, try again."
-      render :edit
-    end
+    @skill.update(skill_params)
+    flash[:notice] = "Skill successfully updated."
+    redirect_to skill_path(@skill)
   end
 
   def destroy

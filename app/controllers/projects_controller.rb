@@ -28,13 +28,9 @@ class ProjectsController < ApplicationController
 
   def update
     @project = Project.find(params[:id])
-    if @project.update(project_params)
-      flash[:notice] = "Project successfully updated."
-      redirect_to skill_project_path(@project.skill, @project)
-    else
-      flash[:alert] = "Unable to update project, try again."
-      render :edit
-    end
+    @project.update(project_params)
+    flash[:notice] = "Project successfully updated."
+    redirect_to skill_project_path(@project.skill, @project)
   end
 
   def destroy

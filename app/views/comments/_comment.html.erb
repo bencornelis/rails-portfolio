@@ -6,7 +6,7 @@
       <span class="pull-right weak">last edited <%= convert_time(comment.time_since_updated) %> ago</span>
     </span>
   </h5>
-  <div>
+  <div class="comment-text">
     <%= comment.text %>
 
     <% if policy(comment).update? %>

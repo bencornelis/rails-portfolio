@@ -42,13 +42,9 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     authorize @post
-    if @post.update(post_params)
-      flash[:notice] = "Post successfully updated."
-      redirect_to post_path(@post)
-    else
-      flash[:alert] = "Unable to update post, try again."
-      render :edit
-    end
+    @post.update(post_params)
+    flash[:notice] = "Post successfully updated."
+    redirect_to post_path(@post)
   end
 
   private

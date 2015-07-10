@@ -23,6 +23,12 @@ FactoryGirl.define do
     admin true
   end
 
+  factory :another_user, class: User do
+    name 'julie'
+    email 'julie@example.com'
+    password 'somechars'
+  end
+
   factory :post do
     title 'epicodus'
     content 'it was great!'
