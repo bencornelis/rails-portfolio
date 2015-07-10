@@ -23,6 +23,7 @@ class ProjectsController < ApplicationController
   def edit
     @skill   = Skill.find(params[:skill_id])
     @project = Project.find(params[:id])
+    authorize @project, :update?
   end
 
   def update

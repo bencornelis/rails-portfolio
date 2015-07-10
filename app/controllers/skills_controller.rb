@@ -16,7 +16,7 @@ class SkillsController < ApplicationController
       redirect_to skills_path
     else
       flash[:alert] = "Unable to add skill, try again."
-      render :new
+      redirect_to :back
     end
   end
 

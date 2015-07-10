@@ -14,6 +14,16 @@ describe "the process of editing a project" do
     click_on "Update Project"
     expect(page).to have_content "Texas Hold'em"
   end
+
+  it "does not let a regular user to edit a project" do
+    skill = FactoryGirl.create(:skill)
+    project = FactoryGirl.create(:project)
+    skill.projects << project
+    user = FactoryGirl.create(:user)
+    login_as(user)
+    visit edit_skill_project_path(skill, project)
+    expect(page).to have_content "You are not authorized to perform this action."
+  end
 end
 
 describe "the process of deleting a project" do

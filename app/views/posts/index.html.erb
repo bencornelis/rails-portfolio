@@ -1,9 +1,22 @@
 <div class="col-md-5 col-md-offset-2 my-panel">
-  <%= render "post", post: @latest_post %>
+  <% if @latest_post %>
+    <%= render "post", post: @latest_post %>
+  <% else %>
+    Blog posts coming soon!
+  <% end %>
 </div>
 
 <div class="separator col-md-offset-1"></div>
 
 <div class="my-panel col-md-2 col-md-offset-1">
   <%= render "recent_posts" %>
+  <% if policy(Post.new).create? %>
+    <%= link_to "New Post", new_post_path %>
+  <% elsif !user_signed_in? %>
+    <div>
+      <%= link_to "Login", new_user_session_path %> or
+      <%= link_to "Signup", new_user_registration_path %>
+    </div>
+    to leave a comment
+  <% end %>
 </div>

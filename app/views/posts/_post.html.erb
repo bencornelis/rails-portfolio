@@ -13,8 +13,8 @@
     <%= post.content %>
   </p>
   <% if policy(post).update? %>
-    <%= link_to "Edit", edit_post_path(post) %> |
-    <%= link_to "Delete", post_path(post), method: :delete, class: "text-danger" %>
+    <%= link_to "Edit post", edit_post_path(post) %> |
+    <%= link_to "Delete post", post_path(post), method: :delete, class: "text-danger" %>
   <% end %>
 </div>
 <p>
