@@ -1,0 +1,4 @@
+$("#new-comment-link").show();
+$("#comment-form").empty();
+$(".comments").prepend("<%= j render 'comments/comment', comment: @comment, post: @post %>");
+$(".notice").empty().html("<%= j render('layouts/notice') %>");

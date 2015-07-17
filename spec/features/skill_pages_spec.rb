@@ -87,3 +87,11 @@ describe "the process of adding a project to a skill" do
     expect(page).to have_content "Unable to add project, try again."
   end
 end
+
+# describe "viewing references", js: true do
+#   it "displays references on the home page when a link is clicked" do
+#     visit root_path
+#     click_on "See References"
+#     expect(page).to have_content "Mike Price, UO Math Assistant Deparment Head"
+#   end
+# end

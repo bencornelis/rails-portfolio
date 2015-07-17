@@ -55,7 +55,7 @@ describe "editing a post" do
 end
 
 describe "adding a comment to a post" do
-  it "allows signed in users to leave a comment" do
+  it "allows signed in users to leave a comment", js: true do
     post = FactoryGirl.create(:post)
     user = FactoryGirl.create(:user)
     login_as(user)
@@ -65,9 +65,10 @@ describe "adding a comment to a post" do
     fill_in "comment_text", with: "nice post!"
     click_on "Create Comment"
     expect(page).to have_content "nice post!"
+    expect(page).to have_no_content "Create Comment"
   end
 
-  it "requires the comment to have text" do
+  it "requires the comment to have text", js:true do
     post = FactoryGirl.create(:post)
     user = FactoryGirl.create(:user)
     login_as(user)
@@ -110,7 +111,7 @@ describe "updating a comment" do
     login_as(user)
     visit post_path(post)
     click_on "Edit"
-    fill_in "Text", with: "I changed my mind..."
+    fill_in "comment_text", with: "I changed my mind..."
     click_on "Update Comment"
     expect(page).to have_content "I changed my mind..."
   end
@@ -125,7 +126,7 @@ describe "updating a comment" do
     login_as(admin)
     visit post_path(post)
     click_on "Edit"
-    fill_in "Text", with: "I changed my mind..."
+    fill_in "comment_text", with: "I changed my mind..."
     click_on "Update Comment"
     expect(page).to have_content "I changed my mind..."
   end

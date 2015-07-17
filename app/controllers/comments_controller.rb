@@ -1,9 +1,14 @@
 class CommentsController < ApplicationController
   before_filter :authenticate_user!
+  before_filter :clear_flash
 
   def new
     @post = Post.find(params[:post_id])
     @comment = Comment.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   def create
@@ -14,10 +19,16 @@ class CommentsController < ApplicationController
     current_user.comments << @comment
     if @comment.save
       flash[:notice] = "Comment successfully added."
-      redirect_to post_path(@post)
+      respond_to do |format|
+        format.html { redirect_to post_path(@post) }
+        format.js
+      end
     else
       flash[:alert] = "Unable to add comment, try again."
-      redirect_to :back
+      respond_to do |format|
+        format.html { redirect_to :back }
+        format.js { render :error }
+      end
     end
   end
 
@@ -45,5 +56,10 @@ class CommentsController < ApplicationController
   private
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def clear_flash
+    flash[:notice] = nil
+    flash[:alert]  = nil
   end
 end

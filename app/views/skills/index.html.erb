@@ -3,8 +3,13 @@
   I'm Ben, a web development student at Epicodus in Portland.
   <p>
     <a href="https://github.com/bencornelis">Github</a> |
-    <a href="https://www.linkedin.com/in/bencornelis">LinkedIn</a>
+    <a href="https://www.linkedin.com/in/bencornelis">LinkedIn</a> |
+    <%= content_tag "a", "See References", id: "see-references-link", class: "reference-link" %>
+    <%= content_tag "a", "Hide References", id: "hide-references-link", class: "reference-link" %>
   </p>
+  <div id="references">
+    <%= render('references') %>
+  </div>
 </div>
 
 <div class="separator col-md-offset-1"></div>

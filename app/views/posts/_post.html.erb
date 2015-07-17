@@ -18,11 +18,12 @@
   <% end %>
 </div>
 <p>
-  <%= link_to "Leave a comment", new_post_comment_path(post) %>
+  <%= render "comments/comment_link", post: post %>
+  <div id="comment-form"></div>
 </p>
 <hr>
 <div class="comments">
-  <% post.comments.each do |comment| %>
+  <% post.comments.order("id desc").each do |comment| %>
     <%= render "comments/comment", comment: comment, post: post %>
   <% end %>
 </div>
