@@ -16,9 +16,17 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
+function toggleText(element, text1, text2) {
+  if (element.text() === text1) {
+    element.text(text2);
+  } else {
+    element.text(text1);
+  }
+}
 
 $(function() {
-  $("#see-references-link, #hide-references-link").click(function() {
-    $("#see-references-link, #hide-references-link, #references").toggle();
-  });
+  $("#references-link").click(function() {
+    $("#references").toggle();
+    toggleText($("#references-link"), "See References", "Hide References");
+  })
 });

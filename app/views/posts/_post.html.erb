@@ -17,9 +17,9 @@
     <%= link_to "Delete post", post_path(post), method: :delete, class: "text-danger" %>
   <% end %>
 </div>
+  <div id="comment-form"></div>
 <p>
   <%= render "comments/comment_link", post: post %>
-  <div id="comment-form"></div>
 </p>
 <hr>
 <div class="comments">

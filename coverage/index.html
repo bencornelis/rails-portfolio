@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-17T09:33:31-07:00">2015-07-17T09:33:31-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-17T16:03:32-07:00">2015-07-17T16:03:32-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>44</b> files in total.
-    <b>633</b> relevant lines. 
-    <span class="green"><b>633</b> lines covered</span> and
+    <b>637</b> relevant lines. 
+    <span class="green"><b>637</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -123,11 +123,11 @@
       <tr>
         <td class="strong"><a href="#30b8eb78e883b40386293e7a6c3fcc300a02ef87" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>19</td>
-        <td>13</td>
-        <td>13</td>
+        <td>22</td>
+        <td>15</td>
+        <td>15</td>
         <td>0</td>
-        <td>12.7</td>
+        <td>11.4</td>
       </tr>
       
       <tr>
@@ -403,7 +403,7 @@
       <tr>
         <td class="strong"><a href="#4445fbe60672f81a5202410dd24e19d29254ba87" class="src_link" title="spec/features/skill_pages_spec.rb">spec/features/skill_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>97</td>
+        <td>99</td>
         <td>69</td>
         <td>69</td>
         <td>0</td>
@@ -423,9 +423,9 @@
       <tr>
         <td class="strong"><a href="#26747440df34feebe97c3abf1ca655f2b22d0762" class="src_link" title="spec/helpers/application_helper_spec.rb">spec/helpers/application_helper_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>18</td>
-        <td>11</td>
-        <td>11</td>
+        <td>25</td>
+        <td>13</td>
+        <td>13</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -487,7 +487,7 @@
         <td>21</td>
         <td>21</td>
         <td>0</td>
-        <td>7.0</td>
+        <td>7.1</td>
       </tr>
       
     </tbody>
@@ -2563,8 +2563,8 @@
     <h3>app/helpers/application_helper.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>13</b> lines covered</span> and
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2584,14 +2584,14 @@
           <code class="ruby">  def convert_time(seconds)</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="3">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="33" data-linenumber="3">
+          <span class="hits">33</span>
           
           <code class="ruby">    time_elapsed = seconds.to_i</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="4">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="33" data-linenumber="4">
+          <span class="hits">33</span>
           
           <code class="ruby">    if time_elapsed &lt; 60</code>
         </li>
@@ -2659,28 +2659,46 @@
         <li class="never" data-hits="" data-linenumber="15">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="16">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          <code class="ruby">    time_unit.chop! if time_elapsed == 1</code>
+          <code class="ruby">      time_unit = &quot;weeks&quot;</code>
         </li>
       
-        <li class="covered" data-hits="32" data-linenumber="17">
-          <span class="hits">32</span>
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          <code class="ruby">    &quot;#{time_elapsed} #{time_unit}&quot;</code>
+          <code class="ruby">      time_elapsed = (time_elapsed/(60*60*24*7)).to_i</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="33" data-linenumber="19">
+          <span class="hits">33</span>
+          
+          <code class="ruby">    time_unit.chop! if time_elapsed == 1</code>
+        </li>
+      
+        <li class="covered" data-hits="33" data-linenumber="20">
+          <span class="hits">33</span>
+          
+          <code class="ruby">    &quot;#{time_elapsed} #{time_unit}&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">end</code>
@@ -8407,40 +8425,52 @@
         <li class="never" data-hits="" data-linenumber="91">
           
           
-          <code class="ruby"># describe &quot;viewing references&quot;, js: true do</code>
+          <code class="ruby"># use following spec if references are displayed using json</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="92">
           
           
-          <code class="ruby">#   it &quot;displays references on the home page when a link is clicked&quot; do</code>
+          <code class="ruby"># </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="93">
           
           
-          <code class="ruby">#     visit root_path</code>
+          <code class="ruby"># describe &quot;viewing references&quot;, js: true do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="94">
           
           
-          <code class="ruby">#     click_on &quot;See References&quot;</code>
+          <code class="ruby">#   it &quot;displays references on the home page when a link is clicked&quot; do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="95">
           
           
-          <code class="ruby">#     expect(page).to have_content &quot;Mike Price, UO Math Assistant Deparment Head&quot;</code>
+          <code class="ruby">#     visit root_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="96">
           
           
-          <code class="ruby">#   end</code>
+          <code class="ruby">#     click_on &quot;See References&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">#     expect(page).to have_content &quot;Mike Price, UO Math Assistant Deparment Head&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">#   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
           
           
           <code class="ruby"># end</code>
@@ -8665,8 +8695,8 @@
     <h3>spec/helpers/application_helper_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>13</b> relevant lines. 
+      <span class="green"><b>13</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -8716,67 +8746,109 @@
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="8">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="8">
           
-          <code class="ruby">    it &quot;converts a number of seconds to minutes&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
+          <code class="ruby">    it &quot;converts a number of seconds to minutes&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
           <code class="ruby">      expect(convert_time(180)).to eq &quot;3 minutes&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="13">
           <span class="hits">1</span>
           
           <code class="ruby">    it &quot;converts a number of seconds to hours&quot; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
           <code class="ruby">      expect(convert_time(3600)).to eq &quot;1 hour&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    it &quot;converts a number of seconds to days&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      expect(convert_time(3600*48)).to eq &quot;2 days&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;converts a number of seconds to days&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(convert_time(3600*48)).to eq &quot;2 days&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="19">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    it &quot;converts a number of seconds to weeks&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      expect(convert_time(3600*24*14)).to eq &quot;2 weeks&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="25">
           
           
           <code class="ruby">end</code>
@@ -9304,8 +9376,8 @@
           <code class="ruby">  config.after :each do</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="36">
-          <span class="hits">43</span>
+        <li class="covered" data-hits="44" data-linenumber="36">
+          <span class="hits">44</span>
           
           <code class="ruby">    Warden.test_reset!</code>
         </li>
@@ -9388,14 +9460,14 @@
           <code class="ruby">   config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="50">
-          <span class="hits">43</span>
+        <li class="covered" data-hits="44" data-linenumber="50">
+          <span class="hits">44</span>
           
           <code class="ruby">     DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="43" data-linenumber="51">
-          <span class="hits">43</span>
+        <li class="covered" data-hits="44" data-linenumber="51">
+          <span class="hits">44</span>
           
           <code class="ruby">       example.run</code>
         </li>

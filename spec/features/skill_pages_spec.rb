@@ -88,6 +88,8 @@ describe "the process of adding a project to a skill" do
   end
 end
 
+# use following spec if references are displayed using json
+# 
 # describe "viewing references", js: true do
 #   it "displays references on the home page when a link is clicked" do
 #     visit root_path
