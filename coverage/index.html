@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-17T16:03:32-07:00">2015-07-17T16:03:32-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-17T17:10:51-07:00">2015-07-17T17:10:51-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">100.0%</span></span>
+    (<span class="covered_percent"><span class="green">99.85%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.67
+         2.7
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>44</b> files in total.
-    <b>637</b> relevant lines. 
-    <span class="green"><b>637</b> lines covered</span> and
-    <span class="red"><b>0</b> lines missed </span>
+    <b>46</b> files in total.
+    <b>647</b> relevant lines. 
+    <span class="green"><b>646</b> lines covered</span> and
+    <span class="red"><b>1</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -93,11 +93,11 @@
       <tr>
         <td class="strong"><a href="#24f1897565cb9fa303e84280fb743b211c9889f9" class="src_link" title="app/controllers/skills_controller.rb">app/controllers/skills_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>52</td>
-        <td>34</td>
-        <td>34</td>
+        <td>53</td>
+        <td>35</td>
+        <td>35</td>
         <td>0</td>
-        <td>1.8</td>
+        <td>2.0</td>
       </tr>
       
       <tr>
@@ -161,6 +161,16 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#787de98547262b7fcdb8da76f735300286c4b255" class="src_link" title="app/models/reference.rb">app/models/reference.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>3</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#bcedae5112ee96d48a30db0cc1408aa12992cc8d" class="src_link" title="app/models/skill.rb">app/models/skill.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>5</td>
@@ -173,9 +183,9 @@
       <tr>
         <td class="strong"><a href="#acd85bd1b4850a4d75a33aedfeace982b31d91ad" class="src_link" title="app/models/user.rb">app/models/user.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>3</td>
-        <td>3</td>
+        <td>9</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -187,7 +197,7 @@
         <td>9</td>
         <td>9</td>
         <td>0</td>
-        <td>45.0</td>
+        <td>47.7</td>
       </tr>
       
       <tr>
@@ -218,6 +228,16 @@
         <td>5</td>
         <td>0</td>
         <td>3.2</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#f1353e67d9068f81af9b5313399b39bb04e1336f" class="src_link" title="app/policies/reference_policy.rb">app/policies/reference_policy.rb</a></td>
+        <td class="red strong">80.0 %</td>
+        <td>10</td>
+        <td>5</td>
+        <td>4</td>
+        <td>1</td>
+        <td>2.2</td>
       </tr>
       
       <tr>
@@ -363,9 +383,9 @@
       <tr>
         <td class="strong"><a href="#b62875cb124a75388df4bd32703681f0be997f7f" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>13</td>
-        <td>7</td>
-        <td>7</td>
+        <td>14</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -403,7 +423,7 @@
       <tr>
         <td class="strong"><a href="#4445fbe60672f81a5202410dd24e19d29254ba87" class="src_link" title="spec/features/skill_pages_spec.rb">spec/features/skill_pages_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>99</td>
+        <td>89</td>
         <td>69</td>
         <td>69</td>
         <td>0</td>
@@ -1663,8 +1683,8 @@
     <h3>app/controllers/skills_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>34</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>35</b> relevant lines. 
+      <span class="green"><b>35</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -1687,298 +1707,304 @@
         <li class="covered" data-hits="8" data-linenumber="3">
           <span class="hits">8</span>
           
-          <code class="ruby">    @skills = Skill.all</code>
+          <code class="ruby">    @references = Reference.all</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="8" data-linenumber="4">
+          <span class="hits">8</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    @skills = Skill.all</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
           <code class="ruby">  def new</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="7">
+        <li class="covered" data-hits="4" data-linenumber="8">
           <span class="hits">4</span>
           
           <code class="ruby">    @skill = Skill.new</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="8">
+        <li class="covered" data-hits="4" data-linenumber="9">
           <span class="hits">4</span>
           
           <code class="ruby">    authorize @skill, :create?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
           <code class="ruby">  def create</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="12">
+        <li class="covered" data-hits="2" data-linenumber="13">
           <span class="hits">2</span>
           
           <code class="ruby">    @skill = Skill.new(skill_params)</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="13">
+        <li class="covered" data-hits="2" data-linenumber="14">
           <span class="hits">2</span>
           
           <code class="ruby">    authorize @skill</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="14">
+        <li class="covered" data-hits="2" data-linenumber="15">
           <span class="hits">2</span>
           
           <code class="ruby">    if @skill.save</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
+        <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:notice] = &quot;Skill successfully added.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to skills_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="18">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
+        <li class="covered" data-hits="1" data-linenumber="19">
           <span class="hits">1</span>
           
           <code class="ruby">      flash[:alert] = &quot;Unable to add skill, try again.&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">      redirect_to :back</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="23">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
           <code class="ruby">  def show</code>
         </li>
       
-        <li class="covered" data-hits="8" data-linenumber="24">
+        <li class="covered" data-hits="8" data-linenumber="25">
           <span class="hits">8</span>
           
           <code class="ruby">    @skill = Skill.find(params[:id])</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="never" data-hits="" data-linenumber="27">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="27">
+        <li class="covered" data-hits="1" data-linenumber="28">
           <span class="hits">1</span>
           
           <code class="ruby">  def edit</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="28">
+        <li class="covered" data-hits="2" data-linenumber="29">
           <span class="hits">2</span>
           
           <code class="ruby">    @skill = Skill.find(params[:id])</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="29">
+        <li class="covered" data-hits="2" data-linenumber="30">
           <span class="hits">2</span>
           
           <code class="ruby">    authorize @skill, :update?</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="31">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="32">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">    @skill = Skill.find(params[:id])</code>
+          <code class="ruby">  def update</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="34">
           <span class="hits">1</span>
           
-          <code class="ruby">    authorize @skill</code>
+          <code class="ruby">    @skill = Skill.find(params[:id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="35">
           <span class="hits">1</span>
           
-          <code class="ruby">    @skill.update(skill_params)</code>
+          <code class="ruby">    authorize @skill</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">    flash[:notice] = &quot;Skill successfully updated.&quot;</code>
+          <code class="ruby">    @skill.update(skill_params)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="37">
           <span class="hits">1</span>
           
-          <code class="ruby">    redirect_to skill_path(@skill)</code>
+          <code class="ruby">    flash[:notice] = &quot;Skill successfully updated.&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    redirect_to skill_path(@skill)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="40">
           
-          <code class="ruby">  def destroy</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    flash[:notice] = &quot;Skill successfully deleted.&quot;</code>
+          <code class="ruby">  def destroy</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">    skill = Skill.find(params[:id])</code>
+          <code class="ruby">    flash[:notice] = &quot;Skill successfully deleted.&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
-          <code class="ruby">    authorize skill</code>
+          <code class="ruby">    skill = Skill.find(params[:id])</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">    skill.destroy</code>
+          <code class="ruby">    authorize skill</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
-          <code class="ruby">    redirect_to skills_path</code>
+          <code class="ruby">    skill.destroy</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="46">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    redirect_to skills_path</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="48">
           
-          <code class="ruby">  private</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="49">
           <span class="hits">1</span>
           
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def skill_params</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="50">
+        <li class="covered" data-hits="3" data-linenumber="51">
           <span class="hits">3</span>
           
           <code class="ruby">    params.require(:skill).permit(:name, :description)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby">end</code>
@@ -3026,6 +3052,42 @@
   </pre>
 </div>
       
+        <div class="source_table" id="787de98547262b7fcdb8da76f735300286c4b255">
+  <div class="header">
+    <h3>app/models/reference.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class Reference &lt; ActiveRecord::Base</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  belongs_to :user</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="bcedae5112ee96d48a30db0cc1408aa12992cc8d">
   <div class="header">
     <h3>app/models/skill.rb</h3>
@@ -3079,8 +3141,8 @@
     <h3>app/models/user.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -3130,7 +3192,13 @@
           <code class="ruby">  has_many :comments</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="8">
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  has_one :reference</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">end</code>
@@ -3178,14 +3246,14 @@
           <code class="ruby">  def initialize(user, record)</code>
         </li>
       
-        <li class="covered" data-hits="103" data-linenumber="5">
-          <span class="hits">103</span>
+        <li class="covered" data-hits="111" data-linenumber="5">
+          <span class="hits">111</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="103" data-linenumber="6">
-          <span class="hits">103</span>
+        <li class="covered" data-hits="111" data-linenumber="6">
+          <span class="hits">111</span>
           
           <code class="ruby">    @record = record</code>
         </li>
@@ -3208,8 +3276,8 @@
           <code class="ruby">  def user_signed_in?</code>
         </li>
       
-        <li class="covered" data-hits="98" data-linenumber="10">
-          <span class="hits">98</span>
+        <li class="covered" data-hits="106" data-linenumber="10">
+          <span class="hits">106</span>
           
           <code class="ruby">    user != nil</code>
         </li>
@@ -3533,6 +3601,84 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="f1353e67d9068f81af9b5313399b39bb04e1336f">
+  <div class="header">
+    <h3>app/policies/reference_policy.rb</h3>
+    <h4><span class="red">80.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ReferencePolicy &lt; ApplicationPolicy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="3">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def new?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="4">
+          
+          
+          <code class="ruby">    user_signed_in?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def create?</code>
+        </li>
+      
+        <li class="covered" data-hits="8" data-linenumber="8">
+          <span class="hits">8</span>
+          
+          <code class="ruby">    user_signed_in?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -6355,8 +6501,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -6415,28 +6561,34 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">  devise_for :users, controllers: {</code>
+          <code class="ruby">  resources :references</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    registrations: &#39;users/registrations&#39;,</code>
+          <code class="ruby">  devise_for :users, controllers: {</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">    sessions: &#39;users/sessions&#39;</code>
+          <code class="ruby">    registrations: &#39;users/registrations&#39;,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">  }</code>
+          <code class="ruby">    sessions: &#39;users/sessions&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  }</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby">end</code>
@@ -8414,66 +8566,6 @@
           
           
           <code class="ruby">end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="90">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="91">
-          
-          
-          <code class="ruby"># use following spec if references are displayed using json</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="92">
-          
-          
-          <code class="ruby"># </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="93">
-          
-          
-          <code class="ruby"># describe &quot;viewing references&quot;, js: true do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="94">
-          
-          
-          <code class="ruby">#   it &quot;displays references on the home page when a link is clicked&quot; do</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="95">
-          
-          
-          <code class="ruby">#     visit root_path</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="96">
-          
-          
-          <code class="ruby">#     click_on &quot;See References&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="97">
-          
-          
-          <code class="ruby">#     expect(page).to have_content &quot;Mike Price, UO Math Assistant Deparment Head&quot;</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="98">
-          
-          
-          <code class="ruby">#   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="99">
-          
-          
-          <code class="ruby"># end</code>
         </li>
       
     </ol>

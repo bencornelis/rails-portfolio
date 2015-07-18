@@ -1,0 +1,6 @@
+<%= form_for Reference.new, remote: true do |f| %>
+  <div class="form-group">
+    <%= f.text_area :recommendation, class: "form-control", rows: "5", placeholder: "Write your recommendation here." %>
+  </div>
+  <%= f.submit class: "btn btn-primary" %>
+<% end %>

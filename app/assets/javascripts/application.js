@@ -24,9 +24,12 @@ function toggleText(element, text1, text2) {
   }
 }
 
-$(function() {
+function readyReferences() {
   $("#references-link").click(function() {
     $("#references").toggle();
     toggleText($("#references-link"), "See References", "Hide References");
-  })
-});
+  });
+}
+
+$(document).ready(readyReferences);
+$(document).on('page:load', readyReferences);

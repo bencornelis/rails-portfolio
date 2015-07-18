@@ -1,0 +1,7 @@
+$("#new-reference-link").show();
+$("#reference-form").empty();
+$("#reference-list").append(
+  "<li class='list-group-item'>" +
+    "<%= @reference.recommendation %> <span class='weak pull-right'>- <%= @reference.user.name %></span>" +
+  "</li>"
+);
