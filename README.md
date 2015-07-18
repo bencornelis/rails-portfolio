@@ -13,6 +13,8 @@ user authentication/authorization.
 - admins can add/edit/delete skills and projects
 - admins can add blog posts
 
+Note: I know I'm missing specs for the reference path. I misread the prompt initially and didn't have time. Will add those later!
+
 ##Installation
 
 Requires Rails and postgres. To use the app, clone the repository, then run the following
