@@ -1,13 +1,17 @@
-<ul id="reference-list" class="list-unstyled list-group">
-  <% @references.each do |reference| %>
-    <li class="list-group-item">
-      <%= reference.recommendation %> <span class="weak pull-right">- <%= reference.user.name %></span>
-    </li>
-  <% end %>
-</ul>
+<% if @references.any? %>
+  <ul id="reference-list" class="list-unstyled list-group">
+    <% @references.each do |reference| %>
+      <li class="list-group-item">
+        <%= reference.recommendation %> <span class="weak pull-right">- <%= reference.user.name %></span>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  None yet
+<% end %>
 
 <% if policy(Reference.new).create? %>
   <%= link_to "Add a recommendation", new_reference_path, id: "new-reference-link", remote: true %>
 <% else %>
-  Please <%= link_to "log in", new_user_session_path %> to write a recommendation.
+  To write a recommendation, please <%= link_to "log in", new_user_session_path %>.
 <% end %>
